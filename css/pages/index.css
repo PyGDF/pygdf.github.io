@@ -24,7 +24,7 @@ content #header-content #text-content {
     padding: 8px;
 }
 
-content #header-content #text-content #main-text {
+content #header-content #text-content #header-main-text {
     font-family: "montserrat-medium";
     font-size: 36px;
 }
