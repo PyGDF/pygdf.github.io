@@ -1,22 +1,49 @@
 @import url("../main.css");
 @import url("../page.css");
 
-content #main-content {
+content #header-content {
+    width: 100%;
+    min-width: 720px;
+    overflow: hidden;
+    position: relative;
+}
+
+content #header-content #header-img {
+    width: 100%;
+    height: auto;
+    min-width: 720px;
+    min-height: 256px;
+    display: block;
+}
+
+content #header-content #text-content {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 5%;
+    transform: translate(0%, -50%);
+    padding: 8px;
+}
 
+content #header-content #text-content #main-text {
+    font-family: "montserrat-medium";
+    font-size: 36px;
+}
+
+content #header-content #text-content #description-text {
+    font-family: "montserrat-regular";
+    font-size: 24px;
+}
+
+content #main-content {
+    flex: 1;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    text-align: center;
+
+    justify-content: center;
     align-items: center;
 }
 
-content #main-content #sign-in {
-    font-size: 16px;
-    width: 156px;
-    height: 48px;
-    border-radius: 24px;
-    margin-top: 16px;
+content #main-content #main-text {
+    font-size: 24px;
+    width: auto;
 }

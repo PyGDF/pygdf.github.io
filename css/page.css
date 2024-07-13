@@ -15,6 +15,9 @@ header {
     height: 48px;
     z-index: 8192;
     position: fixed;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 }
 
 header #logo {
@@ -26,17 +29,14 @@ header #logo {
 header #logo-icon {
     background-image: url("../content/images/favicon.ico");
     background-size: cover;
-    width: 38px;
-    height: 38px;
-    float: left;
-    margin: 5px;
+    width: 30px;
+    height: 30px;
+    margin: 8px;
 }
 
 header #logo-text {
     font-family: "montserrat-medium";
     font-size: 20px;
-    float: left;
-    margin: 4px;
 }
 
 /* ---------------- Основная часть страницы ---------------- */
@@ -44,16 +44,11 @@ header #logo-text {
 content {
     height: 100vh;
     font-size: 24px;
-
     display: flex;
+    flex-direction: column;
     align-items: flex-end;
     position: relative;
-}
-
-content #fluid-canvas {
-    width: 100%;
-    height: 100%;
-    background-color: rgb(0, 0, 0);
+    overflow: hidden; 
 }
 
 /* ---------------- Нижняя часть страницы ---------------- */
@@ -101,17 +96,6 @@ footer #footer-content {
     margin-right: 16px;
 }
 
-footer #github-pages {
-    font-family: "montserrat-regular";
-    font-size: 16px;
-    color: rgba(255, 255, 255, 0.15);
-
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    margin: 16px;
-}
-
 footer #site-version {
     font-family: "montserrat-regular";
     font-size: 16px;
@@ -121,6 +105,6 @@ footer #site-version {
     right: 0;
     bottom: 0;
     margin: 16px;
-    padding-bottom: 20px;
+    padding-bottom: 0px;
 }
 
