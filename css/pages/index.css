@@ -24,7 +24,7 @@ content #header-content #text-content {
     margin-top: 16px;
     margin-left: 16px;
 
-    text-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
 }
 
 content #header-content #text-content #header-main-text {
@@ -38,19 +38,31 @@ content #header-content #text-content #description-text {
 }
 
 content #header-content #text-content #get-started {
-    width: 128px;
-    height: 48px;
-    margin-top: 16px;
-    margin-left: 4px;
-    border-radius: 24px;
+    width: 192px;
+    height: 64px;
+    margin-top: 24px;
 
     font-family: "montserrat-regular";
-    font-size: 20px;
-
+    font-size: 24px;
     color: rgb(0, 0, 0);
+
     border: 0px solid rgb(255, 255, 255);
+    border-radius: 16px;
+
+    background-color: rgb(255, 255, 255);
 
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.25);
+    transition: transform 0.2s ease, background-color 0.1s ease, box-shadow 0.2s ease;
+}
+
+content #header-content #text-content #get-started:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 16px rgba(255, 255, 255, 1);
+}
+
+content #header-content #text-content #get-started:active {
+    transform: scale(95%);
+    background-color: rgb(222, 222, 222);
 }
 
 content #main-content {
@@ -128,6 +140,16 @@ content #main-content #main-links #main-links-blocks > button {
     padding: 32px;
 
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.5);
+    transition: transform 0.25s ease, box-shadow 0.1s ease;
+}
+
+content #main-content #main-links #main-links-blocks > button:hover {
+    transform: scale(105%);
+    box-shadow: 0px 0px 16px rgba(58, 59, 62, 1.0);
+}
+
+content #main-content #main-links #main-links-blocks > button:active {
+    transform: scale(95%);
 }
 
 content #main-content #main-links #main-links-blocks #api-docs {

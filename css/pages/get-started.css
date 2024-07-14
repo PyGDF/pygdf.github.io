@@ -1,7 +1,23 @@
 @import url("../main.css");
 @import url("../page.css");
+@import url("../markdown.css");
 
 content #main-content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+
+    background-color: rgb(24, 25, 28);
+}
+
+content #main-content {
+    font-size: 16px;
+    width: auto;
+    display: block;
+    line-height: 1.75;
+}
+
+content #main-content #document-not-found {
     flex: 1;
     width: 100%;
     display: flex;
@@ -9,14 +25,4 @@ content #main-content {
     align-items: center;
     position: relative;
     overflow: hidden;
-
-    background-image: url("../../content/images/index/background.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-
-content #main-content {
-    font-size: 24px;
-    width: auto;
 }

@@ -1,20 +1,66 @@
+/* Montserrat: */
+
 @font-face {
     font-family: "montserrat-medium";
-    src: url("fonts/montserrat-medium.woff") format("woff");
+    src: url("fonts/Montserrat/medium.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "montserrat-semibold";
-    src: url("fonts/montserrat-semibold.woff") format("woff");
+    src: url("fonts/Montserrat/semibold.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }
 
 @font-face {
     font-family: "montserrat-regular";
-    src: url("fonts/montserrat-regular.woff") format("woff");
+    src: url("fonts/Montserrat/regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* Monospace: */
+
+@font-face {
+    font-family: "mono-bold";
+    src: url("fonts/Monospace/bold.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mono-bolditalic";
+    src: url("fonts/Monospace/bolditalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mono-italic";
+    src: url("fonts/Monospace/italic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mono-medium";
+    src: url("fonts/Monospace/medium.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mono-mediumitalic";
+    src: url("fonts/Monospace/mediumitalic.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "mono-regular";
+    src: url("fonts/Monospace/regular.woff") format("woff");
     font-weight: normal;
     font-style: normal;
 }

@@ -1,0 +1,52 @@
+@import url("main.css");
+
+code {
+    font-family: "mono-regular";
+    font-size: 14px;
+    letter-spacing: 1.1;
+
+    background: rgb(52, 57, 66);
+    margin: 4px;
+    border-radius: 6px;
+    padding: 5px;
+}
+
+pre {
+    position: relative;
+    font-family: "mono-regular";
+    font-size: 14px;
+    letter-spacing: 1px;
+
+    background: rgb(22, 27, 34);
+    margin: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    padding: 16px;
+}
+
+pre code {
+    background: transparent !important;
+    padding: 0px !important;
+    margin: 0px !important;
+}
+
+.md-copy-button {
+    position: absolute; /* Устанавливаем абсолютное позиционирование */
+    top: 10px; /* Располагаем кнопку сверху */
+    right: 10px; /* Располагаем кнопку справа */
+    font-family: "montserrat-regular";
+    background-color: rgb(42, 47, 54);
+    color: rgba(255, 255, 255, 1.0);
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    padding: 8px 12px;
+    cursor: pointer;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+.md-copy-button:hover {
+    background-color: rgb(37, 42, 49);
+    color: rgba(255, 255, 255, 1.0);
+}

@@ -3,17 +3,22 @@
     <head>
         <meta charset="utf-8">
 
-        <link rel="shortcut icon" type="image/x-icon" href="content/images/favicon.ico?v=140720241513">
-        <link rel="stylesheet"    type="text/css"     href="css/pages/get-started.css?v=140720241513">
+        <link rel="shortcut icon" type="image/x-icon" href="content/images/favicon.ico?v=140720241950">
+        <link rel="stylesheet"    type="text/css"     href="css/pages/get-started.css?v=140720241950">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/atom-one-dark.min.css">
 
-        <title>PyGDF - Туториалы и примеры кода</title>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="js/markdown.js"></script>
+
+        <title>Начало работы с PyGDF</title>
     </head>
 
     <body>
-        <content class="no-select">
-            <div id="main-content">
-                Страница в разработке.
-            </div>
+        <content>
+            <div id="main-content"></div>
         </content>
+
+        <script>load_markdown_file("https://raw.githubusercontent.com/LukovDev/PyGDF/master/README.md");</script>
     </body>
 </html>
