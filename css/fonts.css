@@ -21,50 +21,6 @@
     font-style: normal;
 }
 
-/* Monospace: */
-
-@font-face {
-    font-family: "mono-bold";
-    src: url("fonts/Monospace/bold.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "mono-bolditalic";
-    src: url("fonts/Monospace/bolditalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "mono-italic";
-    src: url("fonts/Monospace/italic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "mono-medium";
-    src: url("fonts/Monospace/medium.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "mono-mediumitalic";
-    src: url("fonts/Monospace/mediumitalic.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: "mono-regular";
-    src: url("fonts/Monospace/regular.woff") format("woff");
-    font-weight: normal;
-    font-style: normal;
-}
-
 /* Unknown: */
 
 @font-face {
