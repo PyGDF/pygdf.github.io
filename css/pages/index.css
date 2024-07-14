@@ -38,9 +38,8 @@ content #header-content #text-content #description-text {
 }
 
 content #header-content #text-content #get-started {
-    width: 192px;
-    height: 64px;
     margin-top: 24px;
+    padding: 16px 24px;
 
     font-family: "montserrat-regular";
     font-size: 24px;
@@ -49,20 +48,7 @@ content #header-content #text-content #get-started {
     border: 0px solid rgb(255, 255, 255);
     border-radius: 16px;
 
-    background-color: rgb(255, 255, 255);
-
     box-shadow: 0px 10px 16px rgba(0, 0, 0, 0.25);
-    transition: transform 0.2s ease, background-color 0.1s ease, box-shadow 0.2s ease;
-}
-
-content #header-content #text-content #get-started:hover {
-    transform: scale(105%);
-    box-shadow: 0px 0px 16px rgba(255, 255, 255, 1);
-}
-
-content #header-content #text-content #get-started:active {
-    transform: scale(95%);
-    background-color: rgb(222, 222, 222);
 }
 
 content #main-content {

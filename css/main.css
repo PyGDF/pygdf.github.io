@@ -1,10 +1,13 @@
 @import url("fonts.css");
 
 * {
-    font-family: "montserrat-regular";
     margin: 0;
     padding: 0;
     outline: none;
+}
+
+body {
+    font-family: "montserrat-regular";
 }
 
 a {
@@ -29,6 +32,11 @@ button {
 
 button:hover {
     background-color: rgb(233, 233, 233);
+    color: rgba(0, 0, 0, 1.0);
+}
+
+button:active {
+    background-color: rgb(222, 222, 222);
     color: rgba(0, 0, 0, 1.0);
 }
 

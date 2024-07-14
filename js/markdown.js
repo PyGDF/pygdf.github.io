@@ -7,9 +7,9 @@ async function load_markdown_file(url) {
         hljs.highlightAll();
     } catch (error) {
         const errorDiv = document.createElement("div");
-        errorDiv.id = "document-not-found";
-        errorDiv.innerText = "Документация не найдена.";
-        document.getElementById("main-content").appendChild(errorDiv);
+        errorDiv.id = "file-not-found";
+        errorDiv.innerText = "Файл не найден.";
+        document.querySelector('content').appendChild(errorDiv);
         console.error(error);
     }
 

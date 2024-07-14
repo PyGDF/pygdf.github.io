@@ -1,22 +1,84 @@
 @import url("main.css");
 
+content #file-not-found {
+    font-family: "montserrat-medium";
+    font-size: 24px;
+    flex: 1;
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+content #main-content {
+    font-family: "montserrat-regular";
+    font-size: 16px;
+    line-height: 1.75;
+
+    flex: 1;
+    width: auto;
+    display: block;
+    padding: 92px 92px 92px 92px;
+}
+
+content #main-content img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    pointer-events: none;
+}
+
+.md-copy-button {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: "montserrat-regular";
+    font-size: 13px;
+
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    padding: 8px 12px;
+
+    background-color: rgb(42, 47, 54);
+
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+.md-copy-button:hover {
+    background-color: rgb(37, 42, 49);
+    color: rgba(255, 255, 255, 1.0);
+}
+
 code {
-    font-family: "mono-regular";
-    font-size: 14px;
-    letter-spacing: 1.1;
+    font-family: "clacon";
+    font-size: 16px;
+    letter-spacing: 1px;
 
     background: rgb(52, 57, 66);
-    margin: 4px;
+    margin: 2px;
     border-radius: 6px;
-    padding: 5px;
+    padding: 6px;
 }
 
 pre {
     position: relative;
-    font-family: "mono-regular";
-    font-size: 14px;
-    letter-spacing: 1px;
-
     background: rgb(22, 27, 34);
     margin: 32px;
     border: 1px solid rgba(0, 0, 0, 0.5);
@@ -26,27 +88,8 @@ pre {
 
 pre code {
     background: transparent !important;
+    border: none !important;
+    border-radius: 0px !important;
     padding: 0px !important;
     margin: 0px !important;
-}
-
-.md-copy-button {
-    position: absolute; /* Устанавливаем абсолютное позиционирование */
-    top: 10px; /* Располагаем кнопку сверху */
-    right: 10px; /* Располагаем кнопку справа */
-    font-family: "montserrat-regular";
-    background-color: rgb(42, 47, 54);
-    color: rgba(255, 255, 255, 1.0);
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-    outline: none;
-    padding: 8px 12px;
-    cursor: pointer;
-    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
-}
-
-.md-copy-button:hover {
-    background-color: rgb(37, 42, 49);
-    color: rgba(255, 255, 255, 1.0);
 }

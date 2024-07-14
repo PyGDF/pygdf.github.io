@@ -15,10 +15,49 @@
     </head>
 
     <body>
+        <header class="no-select">
+            <div id="logo" onclick="window.location.href='index.html'">
+                <div id="logo-icon"></div>
+                <div id="logo-text">PyGDF</div>
+            </div>
+        </header>
+
         <content>
+            <div id="main-text">
+                <div id="title-text">Как начать работать с PyGDF?</div>
+                <div id="description-text">
+                    Работать с PyGDF не так сложно, как кажется</br>
+                    Ниже приведена небольшая инструкция.
+                </div>
+            </div>
+
             <div id="main-content"></div>
         </content>
 
-        <script>load_markdown_file("https://raw.githubusercontent.com/LukovDev/PyGDF/master/README.md");</script>
+        <footer class="no-select">
+            <div id="copyright">
+                Copyright © <script>document.write(new Date().getFullYear())</script> LukovDev
+            </div>
+
+            <div id="footer-content">
+                <div class="footer-content-item" id="feedback">
+                    Обратная связь:</br>
+                    <a target="_blank" href="https://t.me/mr_lukov">Telegram</a></br>
+                    <a target="_blank" href="https://vk.com/mr_lukov">VK</a></br>
+                </div>
+
+                <div class="footer-content-item">
+                    Подробнее:</br>
+                    <a target="_blank" href="https://github.com/LukovDev/PyGDF">GitHub PyGDF</a></br>
+                    <a target="" href="about.html">О сайте</a></br>
+                </div>
+            </div>
+
+            <div id="site-version">
+                Версия сайта: v1.0
+            </div>
+        </footer>
+
+        <script>load_markdown_file("https://pygdf.github.io/content/docs/get-started.md");</script>
     </body>
 </html>

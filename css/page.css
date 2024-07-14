@@ -1,7 +1,6 @@
 @import url("main.css");
 
 body, html {
-    font-family: "montserrat-medium";
     background-color: rgb(16, 18, 24);
     color: rgb(255, 255, 255);
 }
@@ -38,6 +37,7 @@ header #logo-icon {
 header #logo-text {
     font-family: "montserrat-medium";
     font-size: 20px;
+    margin-right: 12px;
 }
 
 /* ---------------- Основная часть страницы ---------------- */
@@ -58,6 +58,7 @@ footer {
     background-color: rgb(8, 10, 14);
     color: rgb(255, 255, 255);
     position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 footer #copyright {

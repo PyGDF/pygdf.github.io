@@ -2,27 +2,32 @@
 @import url("../page.css");
 @import url("../markdown.css");
 
-content #main-content {
-    flex: 1;
-    width: 100%;
-    display: flex;
+content #main-text {
+    text-align: center;
+    margin-top: 48px;
+    padding: 64px 0px;
+    line-height: 1.5;
+    background-color: rgb(32, 34, 38);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
 
-    background-color: rgb(24, 25, 28);
+content #main-text #title-text {
+    font-family: "montserrat-regular";
+    font-size: 32px;
+}
+
+content #main-text #description-text {
+    font-family: "montserrat-regular";
+    font-size: 18px;
 }
 
 content #main-content {
-    font-size: 16px;
-    width: auto;
-    display: block;
-    line-height: 1.75;
-}
+    background-color: rgb(22, 24, 28);
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.5);
 
-content #main-content #document-not-found {
-    flex: 1;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+    border-left: 1px solid rgba(255, 255, 255, 0.25);
+    border-right: 1px solid rgba(255, 255, 255, 0.25);
+    margin: 0px 12.5% 0 12.5%;
 }
