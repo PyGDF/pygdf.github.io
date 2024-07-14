@@ -2,17 +2,11 @@
 @import url("../page.css");
 
 content #main-content {
-    font-family: "montserrat-regular";
-    font-size: 24px;
-    line-height: 1.4;
-
     flex: 1;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    text-align: center;
     position: relative;
     overflow: hidden;
 
@@ -22,10 +16,7 @@ content #main-content {
     background-repeat: no-repeat;
 }
 
-content #main-content #webm {
-    margin-bottom: 24px;
-}
-
-content #main-content #go-back {
-    margin-top: 24px;
+content #main-content #main-text {
+    font-size: 24px;
+    width: auto;
 }

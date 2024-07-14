@@ -3,8 +3,8 @@
     <head>
         <meta charset="utf-8">
 
-        <link rel="shortcut icon" type="image/x-icon" href="content/images/favicon.ico?v=140720240120">
-        <link rel="stylesheet"    type="text/css"     href="css/pages/index.css?v=140720240120">
+        <link rel="shortcut icon" type="image/x-icon" href="content/images/favicon.ico?v=140720241450">
+        <link rel="stylesheet"    type="text/css"     href="css/pages/index.css?v=140720241450">
 
         <title>PyGDF - Главная страница</title>
     </head>
@@ -17,17 +17,32 @@
             </div>
         </header>
 
-        <content class="no-select">
-            <div id="header-content">
+        <content>
+            <div id="header-content" class="no-select">
                 <img id="header-img" class="no-img-select" src="content/images/index/header-image.png">
                 <div id="text-content">
                     <div id="header-main-text">PyGDF - Фреймворк для разработки игр на Python</div>
                     <div id="description-text">Python Game Development Framework</div>
+                    <button id="get-started" onclick="window.location.href='api-docs.html'">Начать</button>
                 </div>
             </div>
 
-            <div id="main-content">
-                <div id="main-text">Сайт в разработке.</div>
+            <div id="main-content" class="selectable">
+                <div id="main-text-content">
+                    <div id="main-text">Что такое PyGDF?</div>
+                    <div id="main-description-text">
+                        PyGDF - Фреймворк предназначенный для разработки игр на Python.</br>
+                        PyGDF объединяет возможности PyGame, OpenGL, OpenAL, PyMunk, Socket, ImGUI, DiscordRPC
+                        воедино, чтобы вы могли разрабатывать игры, используя всё это как один мощный инструмент.
+                    </div>
+                </div>
+                <div id="main-links">
+                    <div id="main-links-blocks">
+                        <button id="api-docs" onclick="window.location.href='api-docs.html'">Документация по API</button>
+                        <button id="tutorials" onclick="window.location.href='tutorials.html'">Туториалы и примеры кода</button>
+                        <button id="courses" onclick="window.location.href='courses.html'">Курсы по разработке игр</button>
+                    </div>
+                </div>
             </div>
         </content>
 

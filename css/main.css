@@ -43,6 +43,13 @@ button:hover {
     border-radius: 16px;
 }
 
+.selectable {
+    -webkit-user-select: auto;
+    -moz-user-select: auto;
+    -ms-user-select: auto;
+    user-select: auto;
+}
+
 .no-select {
     -webkit-user-select: none;
     -moz-user-select: none;
