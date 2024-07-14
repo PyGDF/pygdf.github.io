@@ -16,7 +16,7 @@ content #main-content {
     background-repeat: no-repeat;
 }
 
-content #main-content #main-text {
+content #main-content {
     font-size: 24px;
     width: auto;
 }
