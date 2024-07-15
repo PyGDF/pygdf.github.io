@@ -41,7 +41,7 @@ content #main-content li {
 
 content #main-content hr {
     margin: 32px 0px;
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 content #main-content img {
@@ -120,6 +120,7 @@ content #main-content pre .md-copy-button {
     outline: none;
     cursor: pointer;
     box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
+    user-select: none;
 }
 
 content #main-content pre .md-copy-button:hover {

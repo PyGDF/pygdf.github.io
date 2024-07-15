@@ -3,17 +3,62 @@
     <head>
         <meta charset="utf-8">
 
-        <link rel="shortcut icon" type="image/x-icon" href="content/images/favicon.ico?v=150720242211">
-        <link rel="stylesheet"    type="text/css"     href="css/pages/api-docs.css?v=150720242211">
+        <link rel="shortcut icon" type="image/x-icon" href="content/images/favicon.ico?v=160720240055">
+        <link rel="stylesheet"    type="text/css"     href="css/pages/api-docs.css?v=160720240055">
+        <link rel="stylesheet"    type="text/css"     href="css/atom-one-dark.min.css">
+
+        <script src="js/versions.js?v=160720240055"></script>
+        <script src="js/page.js?v=160720240055"></script>
+        <script src="js/markdown.js?v=160720240055"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
         <title>PyGDF - Документация по API</title>
     </head>
 
     <body>
-        <content class="no-select">
+        <header class="no-select">
+            <div id="logo" onclick="window.location.href='index.html'">
+                <div id="logo-icon"></div>
+                <div id="logo-text">PyGDF</div>
+            </div>
+        </header>
+
+        <div id="scroll-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"></div>
+
+        <content>
+            <div id="version-sidebar" class="no-select">
+                <div id="main-text">Список версий:</div>
+            </div>
+
             <div id="main-content">
-                Страница в разработке.
             </div>
         </content>
+
+        <footer class="no-select">
+            <div id="copyright">
+                Copyright © <script>document.write(new Date().getFullYear())</script> LukovDev
+            </div>
+
+            <div id="footer-content">
+                <div class="footer-content-item" id="feedback">
+                    Обратная связь:</br>
+                    <a target="_blank" href="https://t.me/mr_lukov">Telegram</a></br>
+                    <a target="_blank" href="https://vk.com/mr_lukov">VK</a></br>
+                </div>
+
+                <div class="footer-content-item">
+                    Подробнее:</br>
+                    <a target="_blank" href="https://github.com/LukovDev/PyGDF">GitHub PyGDF</a></br>
+                    <a target="" href="about.html">О сайте</a></br>
+                </div>
+            </div>
+
+            <div id="site-version">
+                Версия сайта: v1.0
+            </div>
+        </footer>
+
+        <script>load_versions("https://pygdf.github.io/content/docs/versions.json");</script>
     </body>
 </html>

@@ -1,16 +1,3 @@
-function addLineNumbers() {
-    document.querySelectorAll("pre code").forEach((block) => {
-        let lines = block.innerHTML.split("\n");
-        if (lines[lines.length - 1] === "") lines.pop();
-        const lineNumbers = lines.map((_, i) => `<span>${i + 1}</span>`).join("");
-        const lineNumberWrapper = document.createElement("div");
-        lineNumberWrapper.className = "line-numbers";
-        lineNumberWrapper.innerHTML = lineNumbers;
-        const pre = block.parentNode;
-        pre.insertBefore(lineNumberWrapper, block);
-    });
-}
-
 async function load_markdown_file(url) {
     try {
         const response = await fetch(url);
@@ -18,7 +5,18 @@ async function load_markdown_file(url) {
         const data = await response.text();
         document.getElementById("main-content").innerHTML = marked.parse(data);
         hljs.highlightAll();
-        addLineNumbers();
+        
+        // Add line numbers:
+        document.querySelectorAll("pre code").forEach((block) => {
+            let lines = block.innerHTML.split("\n");
+            if (lines[lines.length - 1] === "") lines.pop();
+            const lineNumbers = lines.map((_, i) => `<span>${i + 1}</span>`).join("");
+            const lineNumberWrapper = document.createElement("div");
+            lineNumberWrapper.className = "line-numbers";
+            lineNumberWrapper.innerHTML = lineNumbers;
+            const pre = block.parentNode;
+            pre.insertBefore(lineNumberWrapper, block);
+        });
     } catch (error) {
         const errorDiv = document.createElement("div");
         errorDiv.id = "file-not-found";

@@ -42,6 +42,30 @@ header #logo-text {
 
 /* ---------------- Основная часть страницы ---------------- */
 
+#scroll-to-top {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+    bottom: 64px;
+    left: -128px;
+    background-color: rgb(37, 42, 49);
+    background-image: url("../content/images/icons/to-up.png");
+    background-size: cover;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    transition: left 0.25s ease;
+}
+
+#scroll-to-top.show {
+    left: 64px;
+}
+
+#scroll-to-top:hover {
+    background-color: rgb(47, 52, 59);
+}
+
 content {
     display: flex;
     flex-direction: column;
