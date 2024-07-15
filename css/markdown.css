@@ -26,6 +26,24 @@ content #main-content {
     padding: 92px 92px 92px 92px;
 }
 
+content #main-content p {
+    margin: 0px 32px;
+}
+
+content #main-content h2 {
+    margin-top: 48px;
+}
+
+content #main-content li {
+    margin-left: 88px;
+    margin-right: 32px;
+}
+
+content #main-content hr {
+    margin: 32px 0px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
 content #main-content img {
     max-width: 100%;
     height: auto;
@@ -38,6 +56,61 @@ content #main-content img {
     -ms-user-select: none;
     user-select: none;
     pointer-events: none;
+}
+
+content #main-content code {
+    font-family: "clacon";
+    font-size: 16px;
+    line-height: 1.1;
+
+    background: rgb(42, 47, 54);
+    margin: 2px;
+    border-radius: 6px;
+    padding: 6px;
+    white-space: pre;
+}
+
+content #main-content pre {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    position: relative;
+    padding: none;
+    background: rgb(22, 27, 34);
+    margin: 32px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    border-radius: 16px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+content #main-content pre .line-numbers {
+    position: sticky;
+    left: 0;
+    top: 0;
+    padding: 16px;
+    text-align: right;
+
+    background: rgb(16, 21, 26);
+    border-right: 1px solid rgba(0, 0, 0, 0.5);
+    border-top-left-radius: 16px;
+    border-bottom-left-radius: 16px;
+    user-select: none;
+}
+
+content #main-content pre .line-numbers > span {
+    font-family: "clacon";
+    font-size: 16px;
+    line-height: 1.1;
+    display: block;
+    color: rgba(255, 255, 255, 0.5);
+    background: rgb(17, 22, 28);
+}
+
+content #main-content pre code {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0px !important;
+    padding: 0px !important;
+    margin: 16px 16px 16px 8px !important;
 }
 
 .md-copy-button {
@@ -58,7 +131,7 @@ content #main-content img {
 
     outline: none;
     cursor: pointer;
-    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.05);
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
 }
 
 .md-copy-button:hover {
@@ -69,59 +142,4 @@ content #main-content img {
 .md-copy-button:active {
     background-color: rgb(34, 39, 46);
     color: rgba(255, 255, 255, 1.0);
-}
-
-code {
-    font-family: "clacon";
-    font-size: 16px;
-    line-height: 1.1;
-
-    background: rgb(52, 57, 66);
-    margin: 2px;
-    border-radius: 6px;
-    padding: 6px;
-    white-space: pre;
-}
-
-pre {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    position: relative;
-    padding: none;
-    background: rgb(22, 27, 34);
-    margin: 32px;
-    border: 1px solid rgba(0, 0, 0, 1);
-    border-radius: 16px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
-}
-
-pre .line-numbers {
-    position: sticky;
-    left: 0;
-    top: 0;
-    padding: 16px;
-    text-align: right;
-
-    background: rgb(16, 21, 26);
-    border-right: 1px solid rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 16px;
-    border-bottom-left-radius: 16px;
-    user-select: none;
-}
-
-pre .line-numbers > span {
-    font-family: "clacon";
-    font-size: 16px;
-    line-height: 1.1;
-    display: block;
-    color: rgba(255, 255, 255, 0.5);
-    background: rgb(17, 22, 28);
-}
-
-pre code {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0px !important;
-    padding: 0px !important;
-    margin: 16px 16px 16px 8px !important;
 }
