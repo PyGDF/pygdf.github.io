@@ -1,6 +1,7 @@
 @import url("fonts.css");
 
 * {
+    scrollbar-color: rgb(88, 92, 106) rgb(48, 52, 66);
     margin: 0;
     padding: 0;
     outline: none;
@@ -38,17 +39,6 @@ button:hover {
 button:active {
     background-color: rgb(222, 222, 222);
     color: rgba(0, 0, 0, 1.0);
-}
-
-::-webkit-scrollbar {
-    width: auto;
-    background: rgb(66, 66, 66);
-}
-
-::-webkit-scrollbar-thumb {
-    background: rgb(123, 123, 123);
-    border: 2.5px solid rgb(66, 66, 66);
-    border-radius: 16px;
 }
 
 .selectable {

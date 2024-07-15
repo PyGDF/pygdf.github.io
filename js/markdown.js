@@ -1,3 +1,16 @@
+function addLineNumbers() {
+    document.querySelectorAll("pre code").forEach((block) => {
+        let lines = block.innerHTML.split("\n");
+        if (lines[lines.length - 1] === "") lines.pop();
+        const lineNumbers = lines.map((_, i) => `<span>${i + 1}</span>`).join("");
+        const lineNumberWrapper = document.createElement("div");
+        lineNumberWrapper.className = "line-numbers";
+        lineNumberWrapper.innerHTML = lineNumbers;
+        const pre = block.parentNode;
+        pre.insertBefore(lineNumberWrapper, block);
+    });
+}
+
 async function load_markdown_file(url) {
     try {
         const response = await fetch(url);
@@ -5,6 +18,7 @@ async function load_markdown_file(url) {
         const data = await response.text();
         document.getElementById("main-content").innerHTML = marked.parse(data);
         hljs.highlightAll();
+        addLineNumbers();
     } catch (error) {
         const errorDiv = document.createElement("div");
         errorDiv.id = "file-not-found";
@@ -16,7 +30,7 @@ async function load_markdown_file(url) {
     document.querySelectorAll("pre").forEach((pre) => {
         const button = document.createElement("button");
         button.className = "md-copy-button";
-        button.innerText = "Скопировать";
+        button.innerText = "Копировать";
         pre.appendChild(button);
 
         button.addEventListener("click", () => {
@@ -24,10 +38,10 @@ async function load_markdown_file(url) {
             navigator.clipboard.writeText(code).then(() => {
                 button.innerText = "Скопировано!";
                 setTimeout(() => {
-                    button.innerText = "Скопировать";
+                    button.innerText = "Копировать";
                 }, 2000);
             }).catch(err => {
-                console.error('Ошибка копирования: ', err);
+                console.error("Ошибка копирования: ", err);
             });
         });
     });
