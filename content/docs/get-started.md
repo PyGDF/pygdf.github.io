@@ -1,13 +1,13 @@
 # Начало работы с PyGDF
 
 ## 1. Подготовка Python
-PyGDF был разработан на версии python ```3.11.8```</br>
-Минимальная версия Python для работы с этим фреймворком ```3.11```</br>
-Ядро фреймворка не будет работать на версии Python ниже ```3.11```</br>
-
-Скачать нужную версию Python можно по прямым ссылкам ниже:</br>
-[**Python 3.11.8 for Windows**](https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe)</br>
-[**Python 3.11.8 for MacOS**](https://www.python.org/ftp/python/3.11.8/python-3.11.8-macos11.pkg)</br>
+   PyGDF был разработан на версии python ```3.11.8```</br>
+    Минимальная версия Python для работы с этим фреймворком ```3.11```</br>
+    Ядро фреймворка не будет работать на версии Python ниже ```3.11```</br>
+    
+   Скачать нужную версию Python можно по прямым ссылкам ниже:</br>
+    [**Python 3.11.8 for Windows**](https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe)</br>
+    [**Python 3.11.8 for MacOS**](https://www.python.org/ftp/python/3.11.8/python-3.11.8-macos11.pkg)</br>
 
 ## 2. Скачивание фреймворка
 Скачать PyGDF в виде ZIP файла можно по [**этой**](https://github.com/LukovDev/PyGDF/archive/refs/heads/master.zip) прямой ссылке.</br>
