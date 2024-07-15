@@ -14,7 +14,7 @@ function addLineNumbers() {
 async function load_markdown_file(url) {
     try {
         const response = await fetch(url);
-        if (!response.ok) throw new Error("Документ не найден");
+        if (!response.ok) throw new Error("Файл не найден");
         const data = await response.text();
         document.getElementById("main-content").innerHTML = marked.parse(data);
         hljs.highlightAll();
@@ -28,13 +28,28 @@ async function load_markdown_file(url) {
     }
 
     document.querySelectorAll("pre").forEach((pre) => {
+        const codeBlock = pre.querySelector("code");
+        if (!codeBlock) return;
+
+        const languageClass = Array.from(codeBlock.classList).find(className => className.startsWith("language-"));
+        const languageName = languageClass ? languageClass.replace("language-", "") : "Text";
+
+        const header = document.createElement("div");
+        header.className = "code-block-header";
+
+        const name = document.createElement("span");
+        name.innerText = languageName.charAt(0).toUpperCase() + languageName.slice(1);
+        header.appendChild(name);
+
         const button = document.createElement("button");
         button.className = "md-copy-button";
         button.innerText = "Копировать";
-        pre.appendChild(button);
+        header.appendChild(button);
+
+        pre.insertBefore(header, pre.firstChild);
 
         button.addEventListener("click", () => {
-            const code = pre.querySelector("code").innerText;
+            const code = codeBlock.innerText;
             navigator.clipboard.writeText(code).then(() => {
                 button.innerText = "Скопировано!";
                 setTimeout(() => {

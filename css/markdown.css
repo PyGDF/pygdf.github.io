@@ -82,6 +82,56 @@ content #main-content pre {
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
 }
 
+content #main-content pre code {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0px !important;
+    padding: 0px !important;
+    margin: 16px 16px 16px 8px !important;
+}
+
+content #main-content pre .code-block-header {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 8px 8px 16px;
+    background: rgb(22, 27, 34);
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.5);
+}
+
+content #main-content pre .code-block-header span {
+    font-family: "montserrat-medium";
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+content #main-content pre .md-copy-button {
+    color: rgba(255, 255, 255, 1.0);
+    font-family: "montserrat-regular";
+    font-size: 13px;
+    padding: 8px 10px;
+    background-color: rgb(42, 47, 54);
+    text-decoration: none;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    cursor: pointer;
+    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
+}
+
+content #main-content pre .md-copy-button:hover {
+    background-color: rgb(37, 42, 49);
+    color: rgba(255, 255, 255, 1.0);
+}
+
+content #main-content pre .md-copy-button:active {
+    background-color: rgb(34, 39, 46);
+    color: rgba(255, 255, 255, 1.0);
+}
+
 content #main-content pre .line-numbers {
     position: sticky;
     left: 0;
@@ -91,7 +141,6 @@ content #main-content pre .line-numbers {
 
     background: rgb(16, 21, 26);
     border-right: 1px solid rgba(0, 0, 0, 0.5);
-    border-top-left-radius: 16px;
     border-bottom-left-radius: 16px;
     user-select: none;
 }
@@ -103,43 +152,4 @@ content #main-content pre .line-numbers > span {
     display: block;
     color: rgba(255, 255, 255, 0.5);
     background: rgb(17, 22, 28);
-}
-
-content #main-content pre code {
-    background: transparent !important;
-    border: none !important;
-    border-radius: 0px !important;
-    padding: 0px !important;
-    margin: 16px 16px 16px 8px !important;
-}
-
-.md-copy-button {
-    color: rgba(255, 255, 255, 1.0);
-    font-family: "montserrat-regular";
-    font-size: 13px;
-
-    position: absolute;
-    top: 8px;
-    right: 8px;
-    padding: 8px 12px;
-
-    background-color: rgb(42, 47, 54);
-
-    text-decoration: none;
-    border: none;
-    border-radius: 8px;
-
-    outline: none;
-    cursor: pointer;
-    box-shadow: 0px 5px 16px rgba(0, 0, 0, 0.1);
-}
-
-.md-copy-button:hover {
-    background-color: rgb(37, 42, 49);
-    color: rgba(255, 255, 255, 1.0);
-}
-
-.md-copy-button:active {
-    background-color: rgb(34, 39, 46);
-    color: rgba(255, 255, 255, 1.0);
 }
