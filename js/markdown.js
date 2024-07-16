@@ -1,9 +1,19 @@
 async function load_markdown_file(url) {
     try {
+        // if (url == "new-doc") {
+        //     document.getElementById("main-content").innerHTML = marked.parse(doc1);
+        // } else {
+        //     const response = await fetch(url);
+        //     if (!response.ok) throw new Error("Файл не найден");
+        //     const data = await response.text();
+        //     document.getElementById("main-content").innerHTML = marked.parse(data);
+        // }
+
         const response = await fetch(url);
         if (!response.ok) throw new Error("Файл не найден");
         const data = await response.text();
         document.getElementById("main-content").innerHTML = marked.parse(data);
+
         hljs.highlightAll();
         
         // Add line numbers:
@@ -18,13 +28,12 @@ async function load_markdown_file(url) {
             pre.insertBefore(lineNumberWrapper, block);
         });
     } catch (error) {
-        const errorDiv = document.createElement("div");
-        errorDiv.id = "file-not-found";
-        errorDiv.innerText = "Файл не найден.";
-        document.querySelector('content').appendChild(errorDiv);
+        const styles = "text-align: center; margin-top: 40vh; font-size: 24px;";
+        document.getElementById("main-content").innerHTML = `<div style="${styles}">Файл не найден.</div>`;
         console.error(error);
     }
 
+    // Add code header and copy button:
     document.querySelectorAll("pre").forEach((pre) => {
         const codeBlock = pre.querySelector("code");
         if (!codeBlock) return;

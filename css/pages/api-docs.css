@@ -13,6 +13,9 @@ content #version-sidebar {
     background-color: rgb(26, 28, 34);
     margin-top: 48px;
     overflow-y: auto;
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 8px 0px 24px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 
 content #version-sidebar #main-text {
@@ -38,6 +41,5 @@ content #version-sidebar a:hover {
 
 content #main-content {
     background-color: rgb(16, 18, 21);
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.5);
     border-left: 1px solid rgba(255, 255, 255, 0.1);
 }

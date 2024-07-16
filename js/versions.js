@@ -1,5 +1,5 @@
-function load_versions(file) {
-    fetch(file)
+function load_versions(url) {
+    fetch(url)
         .then(response => response.json())
         .then(versions => {
             const sidebar = document.getElementById("version-sidebar");
