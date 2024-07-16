@@ -1,27 +1,3 @@
 [
-    {"version": "v1.0-release", "file": "doc-1.0.md"},
-    {"version": "v0.9", "file": ""},
-    {"version": "v0.8", "file": ""},
-    {"version": "v0.7", "file": ""},
-    {"version": "v0.6", "file": ""},
-    {"version": "v0.5", "file": ""},
-    {"version": "v0.4", "file": ""},
-    {"version": "v0.3", "file": ""},
-    {"version": "v0.2", "file": ""},
-    {"version": "v0.1", "file": ""},
-    {"version": "v0.0.9", "file": ""},
-    {"version": "v0.0.8", "file": ""},
-    {"version": "v0.0.7", "file": ""},
-    {"version": "v0.0.6", "file": ""},
-    {"version": "v0.0.5", "file": ""},
-    {"version": "v0.0.4", "file": ""},
-    {"version": "v0.0.3", "file": ""},
-    {"version": "v0.0.2", "file": ""},
-    {"version": "v0.0.1", "file": ""},
-    {"version": "v0.0.0", "file": ""},
-    {"version": "v1.0-release", "file": ""},
-    {"version": "v1.0-release", "file": ""},
-    {"version": "v1.0-release", "file": ""},
-    {"version": "v1.0-release", "file": ""},
-    {"version": "v1.0-release", "file": ""}
+    {"version": "v1.0-release", "file": "doc-1.0.md"}
 ]
