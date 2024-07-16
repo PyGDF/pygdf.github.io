@@ -55,6 +55,7 @@ header #logo-text {
     border-radius: 32px;
     border: none;
     cursor: pointer;
+    z-index: 8192;
     transition: left 0.25s ease;
 }
 
