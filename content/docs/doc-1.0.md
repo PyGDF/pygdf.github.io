@@ -143,7 +143,7 @@
 Подмодуль звука содержит различные скрипты и классы для работы со звуком.
 </section>
 
-<section id="audio-listener" style="font-size: 24px;"></br></br>
+<section id="audio-listener" style="font-size: 24px;"></br>
 Класс <code style="font-size: 24px;">Listener()</code>
 </section></br>
 
