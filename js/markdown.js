@@ -1,6 +1,6 @@
 async function load_markdown_file(url) {
     try {
-        // if (url == "new-doc") {
+        // if (url == "https://pygdf.github.io/content/docs/doc-1.0.md") {
         //     document.getElementById("main-content").innerHTML = marked.parse(doc1);
         // } else {
         //     const response = await fetch(url);

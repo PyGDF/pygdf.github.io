@@ -23,7 +23,14 @@ content #main-content {
     flex: 1;
     width: auto;
     display: block;
-    padding: 92px 92px 92px 92px;
+    padding: 64px 92px 92px 92px;
+}
+
+content #main-content blockquote {
+    border-left: 3px solid rgba(255, 255, 255, 0.1);
+    border-radius: 1.5px;
+    margin-left: 16px;
+    padding-left: 32px;
 }
 
 content #main-content p {
@@ -32,6 +39,14 @@ content #main-content p {
 
 content #main-content h2 {
     margin-top: 48px;
+}
+
+content #main-content tab {
+    margin-left: 24px;
+}
+
+content #main-content dtab {
+    margin-left: 64px;
 }
 
 content #main-content li {
@@ -81,7 +96,7 @@ content #main-content pre {
     position: relative;
     padding: none;
     background: rgb(22, 27, 34);
-    margin: 32px;
+    margin: 16px 32px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 16px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
