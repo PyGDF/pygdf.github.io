@@ -13,9 +13,32 @@
 Эта версия предназначена в основном только для работы с 2D графикой.</br>
 Так как это первая версия, возможно что в ней всё ещё есть проблемы, которые я не заметил.</br>
 Убедительная просьба сообщить [мне](https://t.me/mr_lukov) если найдёте проблемы или баги в работе с ядром.</br>
-В начале сообщения укажите такой хештег: \`\`\`#pygdf_bug_problem\`\`\` и полное название версии.</br>
+В начале сообщения укажите такой хештег: <code>#pygdf_bug_problem</code> и полное название версии.</br>
 В противном случае, я не смогу найти или сохранить ваш чат с сообщением.</br>
-А также, если заметите ошибки в этой документации, сообщите мне. Но с хештегом \`\`\`#docs_mistake\`\`\`
+А также, если заметите ошибки в этой документации, сообщите мне. Но с хештегом <code>#docs_mistake</code>
+
+</br>
+
+#### Ядро требует установки определённых библиотек и определённых версий
+<pre><code class="language-text">pyopenal            == 0.7.11a1
+pyogg               == 0.6.14a1
+
+numpy               == 1.26.4
+pyglm               == 2.7.1
+
+pygame              == 2.5.2
+pyopengl            == 3.1.7
+pyopengl_accelerate == 3.1.7
+
+pymunk              == 6.8.1
+
+pypresence          == 4.3.0
+imgui[pygame]       == 2.0.0
+requests            == 2.32.3
+cython              == 3.0.10
+</code></pre>
+
+Или вы можете запустить файл <code>pypi.bat</code> который есть в папке ядра для установки всех нужных библиотек.
 
 ## Дерево навигации по классам
 Дерево навигации ниже, упростит перемещение по этой странице.</br>
@@ -27,9 +50,9 @@
     - [Music()](#audio-music)
     - [Sound()](#audio-sound)
 - [graphics](#graphics)
-    - [OpenGLWindowError()](              #graphics-exception)
-    - [OpenGLContextNotSupportedError()]( #graphics-exception)
-    - [Animator2D()](                     #graphics-animator)
+    - [OpenGLWindowError()](              #graphics-win-exception)
+    - [OpenGLContextNotSupportedError()]( #graphics-opengl-context-exception)
+    - [Animator2D()](                     #graphics-animator-2d)
     - [AtlasTexture()](                   #graphics-atlas)
     - [SpriteBatch2D()](                  #graphics-batch-sprite)
     - [AtlasTextureBatch2D()](            #graphics-batch-atlas)
@@ -143,7 +166,7 @@
 Подмодуль звука содержит различные скрипты и классы для работы со звуком.
 </section>
 
-<section id="audio-listener" style="font-size: 24px;"></br>
+<section id="audio-listener" style="font-size: 24px;"></br></br>
 Класс <code style="font-size: 24px;">Listener()</code>
 </section></br>
 
@@ -167,7 +190,7 @@
 > </code></pre></br>
 > 
 > </br>
-> <p>Создать слушателя:</p>
+> <p>Создать экземпляр класса:</p>
 > <pre><code class="language-python">my_listener = gdf.audio.Listener(
 >     position = vec3(0, 0, 0),   # Позиция слушателя.
 >     look_at  = vec3(0, 0, -1),  # Можно не указывать.
@@ -265,7 +288,7 @@
 > <i>При создании экземпляра класса, параметры не указываются.</i></p>
 > 
 > </br>
-> <p>Создать проигрывателя:</p>
+> <p>Создать экземпляр класса:</p>
 > <pre><code class="language-python">my_music = gdf.audio.Music()
 > </code></pre></br>
 > 
@@ -361,7 +384,7 @@
 > <i>При создании экземпляра класса, параметры не указываются.</i></p>
 > 
 > </br>
-> <p>Создать звуковой объект:</p>
+> <p>Создать экземпляр класса:</p>
 > <pre><code class="language-python">my_sound = gdf.audio.Sound()
 > </code></pre></br>
 > 
@@ -575,5 +598,194 @@
 > <dtab>Вызывайте эту функцию чтобы освободить ресурсы.</dtab>
 > </tab></p></br>
 
+<section id="graphics">
+</br>
+
+---
+
+</br>
+<h1 style="font-size: 32px;">Graphics</h1>
+Подмодуль графики содержит различные скрипты и классы для работы с графикой.
+</section>
+
+<section id="graphics-win-exception" style="font-size: 24px;"></br></br>
+Исключение <code style="font-size: 24px;">OpenGLWindowError()</code>
+</section></br>
+
+> </br><p>
+> Описание:</br>
+> <tab>Обычно возникает либо в инициализации окна, либо в ходе работы окна.</tab>
+> </p></br>
+
+<section id="graphics-opengl-context-exception" style="font-size: 24px;"></br></br>
+Исключение <code style="font-size: 24px;">OpenGLContextNotSupportedError()</code>
+</section></br>
+
+> </br><p>
+> Описание:</br>
+> <tab>Возникает в инициализации контекста OpenGL</tab></br>
+> <tab>Это исключение означает что инициализируемый контекст OpenGL не поддерживается устройством.</tab></br>
+> <tab>Это значит что устанавливаемая версия OpenGL не поддерживается видео-драйвером.</tab>
+> </p></br>
+
+<section id="graphics-animator-2d" style="font-size: 24px;"></br></br>
+Класс <code style="font-size: 24px;">Animator2D()</code>
+</section></br>
+
+> </br><p>
+> Описание:</br>
+> <tab>Этот класс создаёт аниматора для вашей 2D покадровой анимации.</tab>
+> </p></br>
+>
+> </br>
+> <p>Способ импорта:</p>
+> <pre><code class="language-python">from gdf.graphics import Animator2D
+> </code></pre></br>
+> 
+> </br>
+> <p>Параметры класса:</p>
+> <pre><code class="language-python">frames:   int    # Количество кадров анимации.
+> duration: float  # Продолжительность одного кадра (в секундах).
+> </code></pre></br>
+> 
+> </br>
+> <p>Создать экземпляр класса:</p>
+> <pre><code class="language-python">my_animation = gdf.graphics.Animator2D(
+>     frames   = 4,    # 4 кадра анимации (количество не ограничено).
+>     duration = 0.15  # Продолжительность одного кадра 150 миллисекунд.
+> )
+> </code></pre></br>
+>
+> </br>
+> <p>Атрибут <code>.count</code></br>
+> <tab>Описание:</br>
+> <dtab>Является <code>float</code> типом данных. Это счётчик кадров.</dtab></br>
+> <dtab>Если превратить это число в <code>int</code> тип данных, то мы получим текущий кадр анимации.</dtab>
+> </tab></p></br>
+> 
+> </br>
+> <p>Функция <code>.update()</code></br>
+> <tab>Описание:</br>
+> <dtab>Принимает <code>delta_time: float</code> (время между кадрами).</dtab></br>
+> <dtab>Вызывайте эту функцию в основной функции <code>update()</code> чтобы обновлять анимацию.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Функция <code>.start()</code></br>
+> <tab>Описание:</br>
+> <dtab>Ничего не принимает.</dtab></br>
+> <dtab>Вызывайте эту функцию чтобы запустить анимацию.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Функция <code>.stop()</code></br>
+> <tab>Описание:</br>
+> <dtab>Ничего не принимает.</dtab></br>
+> <dtab>Вызывайте эту функцию чтобы остановить анимацию.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Функция <code>.pause()</code></br>
+> <tab>Описание:</br>
+> <dtab>Ничего не принимает.</dtab></br>
+> <dtab>Вызывайте эту функцию чтобы поставить на паузу анимацию.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Функция <code>.resume()</code></br>
+> <tab>Описание:</br>
+> <dtab>Ничего не принимает.</dtab></br>
+> <dtab>Вызывайте эту функцию чтобы продолжить анимацию после паузы.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Функция <code>.reset()</code></br>
+> <tab>Описание:</br>
+> <dtab>Ничего не принимает.</dtab></br>
+> <dtab>Вызывайте эту функцию чтобы сбросить анимацию.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Функция <code>.get_frame()</code></br>
+> <tab>Описание:</br>
+> <dtab>Ничего не принимает. Возвращает <code>int</code> тип данных.</dtab></br>
+> <dtab>Вызывайте эту функцию чтобы получить текущий кадр анимации.</dtab>
+> </tab></p></br>
+
+<section id="graphics-atlas" style="font-size: 24px;"></br></br>
+Класс <code style="font-size: 24px;">AtlasTexture()</code>
+</section></br>
+
+> </br><p>
+> Описание:</br>
+> <tab>Этот класс просто представляет из себя текстуру, полученную из атласа текстур (большой текстуры спрайтов).</tab></br>
+> <tab>Этот класс является продуктом получения текстуры из атласа. Создавать экземпляр не имеет смысла.</tab>
+> </p></br>
+> <p>
+> Примечание:</br>
+> <tab>Обычно эту текстуру можно получить из упаковщика текстур.</tab></br>
+> <tab>Ниже показано какие параметры вы можете получить из такой текстуры.</tab>
+> </p></br></br>
+>
+> </br>
+> <p>Атрибут <code>.texture</code></br>
+> <tab>Описание:</br>
+> <dtab>Является <code>Texture</code> классом. Это оригинальная текстура полного атласа.</dtab></br>
+> <dtab>Она является оригинальным полным атласом, из которого была получена эта текстура.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Атрибут <code>.id</code></br>
+> <tab>Описание:</br>
+> <dtab>Является <code>int</code> типом данных. Это ID оригинальной текстуры полного атласа.</dtab></br>
+> <dtab>Можете использовать этот <code>id</code> чтобы обращаться к оригинальной текстуре атласа (при работе с OpenGL или шейдерами).</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Атрибут <code>.width</code></br>
+> <tab>Описание:</br>
+> <dtab>Является <code>int</code> типом данных. Это ширина нашей полученной текстуры из атласа текстур.</dtab></br>
+> <dtab>Можете использовать это чтобы узнать ширину полученной текстуры из атласа текстур.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Атрибут <code>.height</code></br>
+> <tab>Описание:</br>
+> <dtab>Является <code>int</code> типом данных. Это высота нашей полученной текстуры из атласа текстур.</dtab></br>
+> <dtab>Можете использовать это чтобы узнать высоту полученной текстуры из атласа текстур.</dtab>
+> </tab></p></br>
+>
+> </br>
+> <p>Атрибут <code>.texcoords</code></br>
+> <tab>Описание:</br>
+> <dtab>Является <code>list</code> типом данных. Хранит координаты вашей текстуры на атласе текстур.</dtab></br>
+> <dtab>Можете использовать это чтобы узнать координаты вершин вашей текстуры на оригинальной текстуре атласа.</dtab>
+> </tab></p></br>
+
+...
+
+<section id="net">
+</br>
+
+---
+
+</br>
+<h1 style="font-size: 32px;">NET</h1>
+Подмодуль сети содержит различные скрипты и классы для работы с сетевым соединением.
+</section>
+
+...
+
+<section id="physics">
+</br>
+
+---
+
+</br>
+<h1 style="font-size: 32px;">Physics</h1>
+Подмодуль физики содержит различные скрипты и классы для работы с физическим движком.
+</section>
+
+...
 
 ---
