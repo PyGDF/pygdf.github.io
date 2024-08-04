@@ -64,6 +64,11 @@ content #main-content hr {
     border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+content #main-content em {
+    font-family: "montserrat-regular";
+    color: rgb(192, 192, 192);
+}
+
 content #main-content img {
     max-width: 100%;
     height: auto;
@@ -94,9 +99,10 @@ content #main-content pre {
     display: grid;
     grid-template-columns: auto 1fr;
     position: relative;
-    padding: none;
     background: rgb(22, 27, 34);
-    margin: 16px 32px;
+    min-width: 156px;
+    padding: none;
+    margin: 8px 32px;
     border: 1px solid rgba(0, 0, 0, 0.5);
     border-radius: 16px;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
