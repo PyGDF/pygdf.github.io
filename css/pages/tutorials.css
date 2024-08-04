@@ -2,11 +2,15 @@
 @import url("../page.css");
 
 content #main-content {
+    font-size: 24px;
+    width: auto;
+
     flex: 1;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     position: relative;
     overflow: hidden;
 
@@ -14,9 +18,4 @@ content #main-content {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-}
-
-content #main-content {
-    font-size: 24px;
-    width: auto;
 }
