@@ -5,16 +5,41 @@
 content {
     display: flex;
     flex-direction: row;
+    overflow: hidden;
+}
+
+#title-bar {
+    font-family: "montserrat-medium";
+    font-size: 38px;
+    text-shadow: 0px 4px 16px rgba(0, 0, 0, 0.5);
+    border-bottom: 1px solid rgb(48, 48, 48);
+
+    flex: 1;
+    display: flex;
+    width: 100%;
+    height: calc(48px + 256px);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    padding-top: 48px;
+
+    background:
+        linear-gradient(rgba(16, 18, 22, 0.5), rgba(16, 18, 22, 0.5)),
+        url("../../content/images/api-docs/title-bar.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 content #version-sidebar {
     width: 256px;
     min-width: 156px;
     background-color: rgb(26, 28, 34);
-    margin-top: 48px;
     overflow-y: auto;
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 8px 0px 24px rgba(0, 0, 0, 0.5);
+    border-right: 1px solid rgb(48, 48, 48);
+    box-shadow: 8px 8px 24px -8px rgba(0, 0, 0, 0.5);
     z-index: 1;
 }
 
@@ -23,7 +48,7 @@ content #version-sidebar #main-text {
     font-size: 18px;
     text-align: center;
     padding: 16px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(48, 48, 48);
 }
 
 content #version-sidebar a {
@@ -32,7 +57,7 @@ content #version-sidebar a {
     font-size: 18px;
     color: white;
     display: block;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgb(48, 48, 48);
 }
 
 content #version-sidebar a:hover {
@@ -41,6 +66,4 @@ content #version-sidebar a:hover {
 
 content #main-content {
     background-color: rgb(16, 18, 21);
-    border-left: 1px solid rgba(255, 255, 255, 0.1);
-    margin-top: 48px;
 }

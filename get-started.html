@@ -7,6 +7,7 @@
         <link rel="stylesheet"    type="text/css"     href="css/pages/get-started.css?v=180720242300">
         <link rel="stylesheet"    type="text/css"     href="css/atom-one-dark.min.css">
 
+        <script src="js/versions.js?v=180720242300"></script>
         <script src="js/page.js?v=180720242300"></script>
         <script src="js/markdown.js?v=180720242300"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
@@ -25,8 +26,15 @@
 
         <div id="scroll-to-top" title="На самый верх" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });"></div>
 
+        <div id="title-bar">Начало работы с PyGDF</div>
+
         <content>
-            <div id="main-content"></div>
+            <div id="version-sidebar" class="no-select">
+                <div id="main-text">Список версий:</div>
+            </div>
+
+            <div id="main-content">
+            </div>
         </content>
 
         <footer class="no-select">
@@ -53,6 +61,6 @@
             </div>
         </footer>
 
-        <script>load_markdown_file("https://pygdf.github.io/content/docs/get-started.md");</script>
+        <script>load_versions("https://pygdf.github.io/content/docs/versions.json");</script>
     </body>
 </html>
