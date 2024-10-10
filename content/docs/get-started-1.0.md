@@ -17,8 +17,7 @@ PyGDF был разработан на версии python ```3.11.8```</br>
 [**Python 3.11.8 for Windows**](https://www.python.org/ftp/python/3.11.8/python-3.11.8-amd64.exe)</br>
 
 ## 2. Скачивание фреймворка
-Скачать PyGDF в виде ZIP файла можно по [**этой**](https://github.com/LukovDev/PyGDF/archive/refs/heads/master.zip) прямой ссылке для Windows.</br>
-Или использовать Git систему для клонирования репозитория ```git clone https://github.com/LukovDev/PyGDF.git```</br>
+Скачать PyGDF в виде ZIP файла можно по [**этой**](https://github.com/LukovDev/PyGDF/archive/refs/tags/v1.0-release.zip) прямой ссылке для Windows.</br>
 
 ## 3. Подготовка шаблона проекта
 Вы скачали фреймворк. Он идёт в виде готового шаблона проекта со встроенной системой сборки на основе ```PyInstaller```</br>
